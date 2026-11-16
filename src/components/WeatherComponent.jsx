@@ -1,23 +1,45 @@
-import react from "react";
-import {WeatherIcons} from '../Constants.js' 
-function WeatherComponent(weather){
+import React from 'react';
+import {WeatherIcons} from '../Constants.js'
+import WeatherInfoComponent from './WeatherInfoComponent.jsx';
 
-    weather = `${weather?.main?.temp}`  
+function WeatherComponent({weather}){
+
     const description = `${weather?.weather[0]?.description}`
 
+    const isDay = `weather?.weather[0].icon`.includes()
+    if (isDay === false){
+        console.log('Сейас ночь')
+    }
+    else{
+        console.log('Сейчас день')
+    }
+    function getTime(timeStamp){
+
+
+        return(
+            console.log
+        )
+    }
     return(
         <>
             <div className="WeatherContainer">
                 <span className="Condition">
-                    <span>`${Math.floor(weather-273)} ${description}` </span>
+                    <span>{Math.floor(`${weather?.main?.temp}` -273)}℃ | {description} </span>
                     
                 </span>
-                <img className="WeatherIcon" src={WeatherIcons[weather?.weather[0]?.icon]}/>
+                <img className="WeatherIcon" src={WeatherIcons[weather?.weather[0]?.icon]} alt=' '/>
             </div>
-            <span className="Location"> Name, Country</span>
-            <span className="WeatherInfoLabel">Weather Info</span>
+            <span className="Location">{weather?.name} {weather?.sys?.country}</span>
+           <span className="WeatherInfoLabel">Weather Info</span>
+           <div className='WeatherInfoContainer'>
+            <WeatherInfoComponent />
+            <WeatherInfoComponent />
+            <WeatherInfoComponent />
+            <WeatherInfoComponent />
+           </div>
         </>
     );
+
 }
 
 

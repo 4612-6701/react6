@@ -2,6 +2,7 @@ import React, { use, useState } from "react";
 import './index.css';
 import CityComponents from "./components/CityComponent.jsx";
 import WeatherComponent from "./components/WeatherComponent.jsx";
+import WeatherInfoComponent from "./components/WeatherInfoComponent.jsx";
 
 function App (){
 
