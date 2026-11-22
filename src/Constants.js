@@ -30,19 +30,10 @@ export const WeatherIcons= {
 "11n": storm,
 };
 
-export const WeatherInfoIcons= {
-"01d": sunny,
-"01n": night,
-"02d": day,
-"02n": cloudyNight,
-"03d": cloudy,
-"03n": cloudy,
-"04d": perfectDay,
-"04n": cloudyNight,
-"09d": rain,
-"09n": rainNight,
-"10d": rain,
-"10n": rainNight,
-"11d": storm,
-"11n": storm,
+export const WeatherInfoIcons = {
+    sunset: sunset,
+    sunrise: sunrise,
+    humidity: humidity,
+    wind: wind,
+    pressure: pressure,
 };

@@ -1,11 +1,11 @@
 import React from "react";
-
-function WeatherInfoComponent(){
+import { WeatherInfoIcons } from "../Constants";
+function WeatherInfoComponent({name, value}){
 
     return(
         <div className="InfoConteiner">
-            <img className="InfoIcon" />
-            <span className="InfoLabel">Name</span>
+            <img className="InfoIcon" src={WeatherInfoIcons[name]} />
+            <span className="InfoLabel">{name} {value}</span>
             
         </div>
     )

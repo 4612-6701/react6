@@ -31,10 +31,10 @@ function WeatherComponent({weather}){
             <span className="Location">{weather?.name} {weather?.sys?.country}</span>
            <span className="WeatherInfoLabel">Weather Info</span>
            <div className='WeatherInfoContainer'>
-            <WeatherInfoComponent />
-            <WeatherInfoComponent />
-            <WeatherInfoComponent />
-            <WeatherInfoComponent />
+            <WeatherInfoComponent name={isDay ? "sunset" : "sunrise"} value={`${getTime(weather?.sys[isDay ? "sunset" : "sunrise" ])}`}/>
+            <WeatherInfoComponent name={"humidity"} value={weather?.main?.humidity}/>
+            <WeatherInfoComponent name={"wind"} value={weather?.wind?.speed}/>
+            <WeatherInfoComponent name={"pressure"} value={weather?.main?.pressure}/>
            </div>
         </>
     );
