@@ -14,12 +14,11 @@ function WeatherComponent({weather}){
         console.log('Сейчас день')
     }
     function getTime(timeStamp){
-
-
         return(
-            console.log
+            `${new Date(timeStamp*1000).getHours()} : ${new Date(timeStamp*1000).getMinutes()}`
         )
     }
+    console.log(getTime(1703743585))
     return(
         <>
             <div className="WeatherContainer">
